@@ -14,20 +14,24 @@ const Live = () => {
 
   // pinata
   const pinata = new PinataSDK({
-    pinataJwt: import.meta.env.PINATA_JWT,
-    pinataGateway: import.meta.env.PINATA_GATEWAY,
+    pinataJwt: import.meta.env.VITE_PINATA_JWT,
+    pinataGateway: import.meta.env.VITE_PINATA_GATEWAY,
   });
+
+  console.log(import.meta.env.VITE_PINATA_JWT)
+  console.log(import.meta.env.VITE_PINATA_GATEWAY)
 
   async function fetchImage(id) {
     try {
-      const data = await pinata.gateways.get(id);
-      console.log(data)
-
+      // const data = await pinata.gateways.get(id);
+      // console.log(data)
+      console.log("create")
       const url = await pinata.gateways.createSignedURL({
         cid: id,
         expires: 1800,
       })
       console.log('Image URL:', url)
+    
       setImageUrl(url)
     } catch (error) {
       console.log('Error fetching image: ', error)
@@ -45,10 +49,11 @@ const Live = () => {
 
   useEffect(() => {
     // create a socket connection
-    const socket = io("http://localhost:3000")
-
+    const socket = io("http://11.20.7.225:5001")
+    console.log("binding socket")
     // listen for heatmap
-    socket.on('message', (data) => {
+    socket.on('heatmap', (data) => {
+      console.log(data)
       fetchImage(data)
     })
 
@@ -67,7 +72,7 @@ const Live = () => {
   return (
       <div className="w-[430px] h-[932px] rounded-3xl shadow-lg overflow-hidden flex flex-col items-center justify-center">  
           {/* Main Content */}
-          <div className="h-[650px] flex flex-col">
+          <div className="h-[600px] flex flex-col">
             <HeatMap imageUrl={imageUrl}/>
             <br />
             <Tips />

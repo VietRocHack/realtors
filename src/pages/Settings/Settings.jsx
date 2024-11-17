@@ -19,8 +19,6 @@ const Settings = () => {
                         <Camera />
                         <br />
                         <Camera />
-                        <br />
-                        <Camera />
                     </div>
                 </div>
             </div>
