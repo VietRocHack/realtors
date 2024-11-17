@@ -1,6 +1,4 @@
 import React, { useRef, useEffect } from 'react'
-import jsmpeg from 'jsmpeg'
-import ReactPlayer from 'react-player'
 
 const Camera = () => {
   return (
