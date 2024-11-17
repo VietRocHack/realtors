@@ -30,7 +30,16 @@ const Live = () => {
       console.log('Image URL:', url)
       setImageUrl(url)
     } catch (error) {
-      console.log('Error fetching image:', error);
+      console.log('Error fetching image: ', error)
+    }
+  }
+
+  async function fetchTips(text) {
+    try {
+      console.log(text)
+      setMessage(text)
+    } catch (error) {
+      console.log('Error tips: ', error)
     }
   }
 
@@ -38,12 +47,14 @@ const Live = () => {
     // create a socket connection
     const socket = io("http://localhost:3000")
 
-    // listen for an event
+    // listen for heatmap
     socket.on('message', (data) => {
-      console.log('Received message: ', data)
-      // call the async function
       fetchImage(data)
-      setMessage(data)
+    })
+
+    // listen for tips
+    socket.on('tips', (text) => {
+      fetchTips(text)
     })
 
     // clean up the socket connection
