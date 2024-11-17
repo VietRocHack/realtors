@@ -12,11 +12,13 @@
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "jsmpeg": "^1.0.0",
+    "pinata": "^1.8.1",
     "postcss": "^8.4.49",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-player": "^2.16.0",
     "react-router-dom": "^6.28.0",
+    "socket.io-client": "^4.8.1",
     "video.js": "^8.19.1",
     "videojs-contrib-hls": "^5.15.0"
   },
