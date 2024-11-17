@@ -10,7 +10,7 @@ const Settings = () => {
   return (
       <div className="w-[430px] h-[932px] rounded-3xl shadow-lg overflow-hidden flex flex-col items-center justify-center">  
           {/* Main Content */}
-          <div className="h-[650px] flex flex-col">
+          <div className="h-[650px] flex flex-col mb-4">
             <Information />
             <Camera />
             <Camera />
