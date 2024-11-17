@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import Button from '../../components/Button/Button'
+import WhiteButton from '../../components/Button/WhiteButton'
 import Camera from './Camera'
 import Information from './Information'
 
@@ -21,9 +21,9 @@ const Settings = () => {
           <br />
           
           {/* Live button */}
-          <Button onClick={() => navigate('/live')}>
+          <WhiteButton onClick={() => navigate('/live')}>
               Start stream
-          </Button>
+          </WhiteButton>
       </div>
   )
 }

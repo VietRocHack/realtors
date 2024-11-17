@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { io } from 'socket.io-client'
 import { PinataSDK } from "pinata"
-import Button from '../../components/Button/Button'
+import WhiteButton from '../../components/Button/WhiteButton'
 import HeatMap from './HeatMap'
 import Tips from './Tips'
 
@@ -74,9 +74,9 @@ const Live = () => {
           </div>
 
           {/* Live button */}
-          <Button onClick={() => navigate('/endpage')}>
+          <WhiteButton onClick={() => navigate('/endpage')}>
               End stream
-          </Button>
+          </WhiteButton>
       </div>
   )
 }

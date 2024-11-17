@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../components/Button/Button'
+import WhiteButton from '../../components/Button/WhiteButton'
 import { useNavigate } from 'react-router-dom'
 
 const EndPage = () => {
@@ -14,9 +14,9 @@ const EndPage = () => {
         </div>
 
         {/* Live button */}
-        <Button onClick={() => navigate('/')}>
+        <WhiteButton onClick={() => navigate('/')}>
             Home
-        </Button>
+        </WhiteButton>
     </div>
   )
 }

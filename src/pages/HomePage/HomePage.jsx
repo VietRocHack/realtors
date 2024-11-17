@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../components/Button/Button'
+import Button from '../../components/Button/WhiteButton'
 import { useNavigate } from 'react-router-dom'
 import home from '../../assets/home.jpg'
 import NavBar from '../../components/NavBar/NavBar'
@@ -12,7 +12,7 @@ const HomePage = () => {
             <div className="flex-1">
                 <img src={home} alt="Home" className="w-full h-full object-cover" />
             </div>
-            <NavBar name="Explore" nav="settings" />
+            <NavBar nav="settings" />
         </div>
     )
 }
