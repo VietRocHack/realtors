@@ -21,8 +21,7 @@ const Settings = () => {
           <br />
           
           {/* Live button */}
-          <WhiteButton onClick={() => navigate('/live')}>
-              Start stream
+          <WhiteButton onClick={() => navigate('/live')} name="Start Stream">
           </WhiteButton>
       </div>
   )

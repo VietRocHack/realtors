@@ -14,8 +14,7 @@ const EndPage = () => {
         </div>
 
         {/* Live button */}
-        <WhiteButton onClick={() => navigate('/')}>
-            Home
+        <WhiteButton onClick={() => navigate('/')} name="Home">
         </WhiteButton>
     </div>
   )

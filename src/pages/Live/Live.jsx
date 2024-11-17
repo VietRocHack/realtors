@@ -74,8 +74,7 @@ const Live = () => {
           </div>
 
           {/* Live button */}
-          <WhiteButton onClick={() => navigate('/endpage')}>
-              End stream
+          <WhiteButton onClick={() => navigate('/endpage')} name="End Stream">
           </WhiteButton>
       </div>
   )
