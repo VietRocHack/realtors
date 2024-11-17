@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
+    "framer-motion": "^11.11.17",
     "jsmpeg": "^1.0.0",
     "pinata": "^1.8.1",
     "postcss": "^8.4.49",
