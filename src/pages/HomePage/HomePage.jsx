@@ -6,7 +6,7 @@ const HomePage = () => {
     const navigate = useNavigate()
 
     return (
-        <div className="w-full max-w-[430px] h-[932px] rounded-3xl shadow-lg overflow-hidden flex flex-col">
+        <div className="w-[430px] h-[932px] rounded-3xl shadow-lg overflow-hidden flex flex-col">
             <header className="mt-16 mb-8">
                 <h1 className="text-5xl font-bold leading-tight text-center text-white">reAItor</h1>
             </header>
@@ -24,7 +24,6 @@ const HomePage = () => {
                     <h2 className="text-2xl font-semibold text-center">for 
                         <span className="text-emerald-400"> realtors</span>
                     </h2>
-                    
                 </div>
 
                 {/* Start button */}
